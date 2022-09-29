@@ -13,15 +13,17 @@ import Footer from 'components/Footer/Footer'
 
 export default function App() {
   return (
-    <main>
+    <>
       <Header />
-      <Hero />
-      <About />
-      <Cases />
-      <Blog />
-      <Team />
-      <Forma />
+      <main>
+        <Hero />
+        <About />
+        <Cases />
+        <Blog />
+        <Team />
+        <Forma />
+      </main>
       <Footer />
-    </main>
+    </>
   )
 }
