@@ -4,4 +4,4 @@ npm start
 
 OR
 
-follow the [LINK]()
+follow the [LINK](https://finance-ledger-marynaost.netlify.app/)

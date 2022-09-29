@@ -5,7 +5,7 @@ export default function Container({ children, className }) {
 
 const ContainerWrap = styled.div`
   position: relative;
-  width: 100vw;
+  /* width: 100vw; */
   margin: 0 auto;
   padding: 0 10px;
   @media screen and (min-width: 320px) {

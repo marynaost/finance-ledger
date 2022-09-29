@@ -38,7 +38,7 @@ export default function Cases(params) {
         </Text>
         <CasesList>
           <CasesItem>
-            <a href="/" data-lightbox="/">
+            <a href={cases1jpg} data-lightbox="cases" data-title="My caption">
               <Picture
                 webp1x={cases1Webp}
                 webp2x={cases1Webp2x}
@@ -48,7 +48,7 @@ export default function Cases(params) {
             </a>
           </CasesItem>
           <CasesItem>
-            <a href="/" data-lightbox="/">
+            <a href={cases3jpg} data-lightbox="cases" data-title="My caption">
               <Picture
                 webp1x={cases3Webp}
                 webp2x={cases3Webp2x}
@@ -58,7 +58,7 @@ export default function Cases(params) {
             </a>
           </CasesItem>
           <CasesItem>
-            <a href="/" data-lightbox="/">
+            <a href={cases5jpg} data-lightbox="cases" data-title="My caption">
               <Picture
                 webp1x={cases5Webp}
                 webp2x={cases5Webp2x}
@@ -68,7 +68,7 @@ export default function Cases(params) {
             </a>
           </CasesItem>
           <CasesItem>
-            <a href="/" data-lightbox="/">
+            <a href={cases7jpg} data-lightbox="cases" data-title="My caption">
               <Picture
                 webp1x={cases7Webp}
                 webp2x={cases7Webp2x}
@@ -78,7 +78,7 @@ export default function Cases(params) {
             </a>
           </CasesItem>
           <CasesItem>
-            <a href="/" data-lightbox="/">
+            <a href={cases2jpg} data-lightbox="cases" data-title="My caption">
               <Picture
                 webp1x={cases2Webp}
                 webp2x={cases2Webp2x}
@@ -88,7 +88,7 @@ export default function Cases(params) {
             </a>
           </CasesItem>
           <CasesItem>
-            <a href="/" data-lightbox="/">
+            <a href={cases4jpg} data-lightbox="cases" data-title="My caption">
               <Picture
                 webp1x={cases4Webp}
                 webp2x={cases4Webp2x}
