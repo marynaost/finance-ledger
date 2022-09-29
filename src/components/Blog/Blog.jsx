@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import Container from 'components/Container/Container'
+import Button from 'components/Button/Button'
 import { Picture } from 'components/Picture/Picture'
 import blog from 'images/home/blog.jpg'
 import blog2 from 'images/home/blog@2x.jpg'
@@ -25,7 +26,9 @@ export default function Blog(params) {
           illum dolore explicabo ab dolores itaque rerum temporibus doloribus
           iste maiores deleniti?
         </Text>
-        <button type="button">Read Our Blog</button>
+        <Button blog type="button">
+          Read Our Blog
+        </Button>
       </Container>
     </Section>
   )

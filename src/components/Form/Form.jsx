@@ -2,12 +2,14 @@ import { Formik, Form, Field } from 'formik'
 import styled from 'styled-components'
 import * as Yup from 'yup'
 import { Picture } from 'components/Picture/Picture'
+import Button from 'components/Button/Button'
 import { handleSubmit } from 'services/netlifyForm'
 import Container from 'components/Container/Container'
 import contact from 'images/home/contact.jpg'
 import contact2 from 'images/home/contact@2x.jpg'
 import contactwebp from 'images/home/contact.webp'
 import contactwebp2 from 'images/home/contact@2x.webp'
+import worning from 'images/form/worning.svg'
 
 const validateSchema = Yup.object().shape({
   name: Yup.string().min(2, 'Too Short!').max(50, 'Too Long!'),
@@ -41,7 +43,7 @@ export default function Forma() {
           }}
         >
           {({ errors, touched }) => (
-            <Form name='contact' method="POST" data-netlify="true">
+            <Form name="contact" method="POST" netlify>
               <FieldWrap>
                 <Field
                   name="name"
@@ -49,6 +51,7 @@ export default function Forma() {
                   placeholder=" "
                   className="field"
                   id="name"
+                  form-name="name"
                 />
                 <label for="name" className="label">
                   Enter your name
@@ -64,15 +67,18 @@ export default function Forma() {
                   placeholder=" "
                   className="field"
                   id="email"
+                  form-name="email"
                 />
                 <label for="email" className="label">
                   Enter email*
                 </label>
                 {errors.email && touched.email ? (
-                  <div className="error">{errors.email}</div>
+                  <div className="error required">{errors.email}</div>
                 ) : null}
               </FieldWrap>
-              <button type="submit">Submit</button>
+              <Button type="submit" submit>
+                Submit
+              </Button>
             </Form>
           )}
         </Formik>
@@ -156,7 +162,6 @@ const FieldWrap = styled.div`
   }
 
   .field {
-    /* position: relative; */
     width: 100%;
     height: 56px;
     padding: 16px 8px;
@@ -188,9 +193,20 @@ const FieldWrap = styled.div`
     position: absolute;
     top: 100%;
     left: 0;
+    font-size: 14px;
     display: flex;
     align-items: center;
-    padding: 4px;
     color: #d11212;
+  }
+
+  .required::before {
+    content: '';
+    width: 16px;
+    height: 15px;
+    display: inline-block;
+    background-image: url(${worning});
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
   }
 `

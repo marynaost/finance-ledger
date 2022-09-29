@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import Container from 'components/Container/Container'
+import Button from 'components/Button/Button'
 import { Picture } from 'components/Picture/Picture'
 import people from 'images/home/people.jpg'
 import people2 from 'images/home/people@2x.jpg'
@@ -7,7 +8,7 @@ import peoplewebp from 'images/home/people.webp'
 import peoplewebp2 from 'images/home/people@2x.webp'
 export default function About(params) {
   return (
-    <Section>
+    <Section id="about">
       <Picture
         webp1x={peoplewebp}
         webp2x={peoplewebp2}
@@ -25,7 +26,9 @@ export default function About(params) {
           illum dolore explicabo ab dolores itaque rerum temporibus doloribus
           iste maiores deleniti?
         </Text>
-        <Button>Read More</Button>
+        <Button about type="button">
+          Read More
+        </Button>
       </Container>
     </Section>
   )
@@ -88,8 +91,4 @@ const Text = styled.p`
   margin-bottom: 24px;
   @media screen and (min-width: 768px) {
   }
-`
-const Button = styled.button`
-  height: 57px;
-  width: 156px;
 `

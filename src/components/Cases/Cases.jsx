@@ -28,7 +28,7 @@ import cases4Webp2x from 'images/cases/cases4@2x.webp'
 
 export default function Cases(params) {
   return (
-    <Section>
+    <Section id="cases">
       <Container>
         <SubTitle>This is what we do</SubTitle>
         <Title>Business Cases</Title>
@@ -165,6 +165,11 @@ const CasesList = styled.ul`
 const CasesItem = styled.li`
   display: flex;
   justify-content: center;
+  &:hover,
+  &:focus {
+    opacity: 0.8;
+  }
+
   @media screen and (max-width: 767px) {
     &:not(:last-child) {
       margin-bottom: 8px;

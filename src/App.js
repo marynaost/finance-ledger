@@ -13,7 +13,7 @@ import Footer from 'components/Footer/Footer'
 
 export default function App() {
   return (
-    <>
+    <main>
       <Header />
       <Hero />
       <About />
@@ -22,6 +22,6 @@ export default function App() {
       <Team />
       <Forma />
       <Footer />
-    </>
+    </main>
   )
 }

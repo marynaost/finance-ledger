@@ -15,10 +15,15 @@ const LogoLink = styled.a`
   font-size: 28px;
   line-height: 1.36;
   color: inherit;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover,
+  &:focus {
+    transform: scale(1.05);
+    filter: brightness(120%);
+  }
+
   .icon {
     fill: #28a745;
-    /* width: 40px;
-    height: 30px; */
   }
 `
 

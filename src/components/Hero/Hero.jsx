@@ -2,13 +2,16 @@ import styled from 'styled-components'
 import showcase from 'images/home/showcase.jpg'
 import showcase2x from 'images/home/showcase@2x.jpg'
 import Container from 'components/Container/Container'
-export default function Hero(params) {
+import Button from 'components/Button/Button'
+export default function Hero() {
   return (
-    <Section>
+    <Section id="home">
       <Container>
         <Title>The Sky Is The Limit</Title>
         <SubTitle>We provide world class financial assistance</SubTitle>
-        <button>Read More</button>
+        <Button type="button" hero>
+          Read More
+        </Button>
       </Container>
     </Section>
   )
