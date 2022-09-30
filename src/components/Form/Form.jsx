@@ -1,10 +1,11 @@
 import { Formik, Form, Field } from 'formik'
 import styled from 'styled-components'
 import * as Yup from 'yup'
+import { handleSubmit } from 'services/netlifyForm'
 import { Picture } from 'components/Picture/Picture'
 import Button from 'components/Button/Button'
-import { handleSubmit } from 'services/netlifyForm'
 import Container from 'components/Container/Container'
+
 import contact from 'images/home/contact.jpg'
 import contact2 from 'images/home/contact@2x.jpg'
 import contactwebp from 'images/home/contact.webp'
@@ -43,11 +44,8 @@ export default function Forma() {
           }}
         >
           {({ errors, touched }) => (
-            <Form
-              name="contact"
-              data-netlify="true"
-              data-netlify-honeypot="bot-field"
-            >
+            <Form name="contact" method="post">
+              <input type="hidden" name="form-name" value="contact" />
               <FieldWrap>
                 <Field
                   name="name"
