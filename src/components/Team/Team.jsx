@@ -2,6 +2,15 @@ import styled from 'styled-components'
 import { FaFacebook, FaTwitter, FaYoutube, FaLinkedinIn } from 'react-icons/fa'
 import Container from 'components/Container/Container'
 import { Picture } from 'components/Picture/Picture'
+import {
+  secondColor,
+  mainTextColor,
+  duration,
+  timingFunc,
+  overlayBgColor,
+  boxShadow,
+} from 'styles/stylesVars'
+
 import person1jpg from '../../images/team/person1.jpg'
 import person1Webp from '../../images/team/person1.webp'
 import person1jpg2x from '../../images/team/person1@2x.jpg'
@@ -200,7 +209,7 @@ export default function Team(params) {
 const Section = styled.section`
   padding: 72px 0 50px;
   text-align: center;
-  color: #333333;
+  color: ${secondColor};
 
   @media screen and (min-width: 768px) {
     padding: 50px 0 40px;
@@ -278,10 +287,10 @@ const TeamItemThumb = styled.div`
   position: relative;
   overflow: hidden;
   margin-bottom: 16px;
-  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: box-shadow ${duration} ${timingFunc};
   &:hover,
   &:focus {
-    box-shadow: 2px 2px 12px 2px rgba(0, 0, 0, 0.4);
+    box-shadow: ${boxShadow};
   }
   &:hover .overlay {
     transform: scale(1.2);
@@ -292,7 +301,7 @@ const TeamItemThumb = styled.div`
   }
 
   .icon {
-    fill: #ffffff;
+    fill: ${mainTextColor};
     width: 35px;
     height: 35px;
     &:hover,
@@ -308,11 +317,10 @@ const Overlay = styled.div`
   height: 100%;
   top: 0;
   left: 0;
-  background: rgba(4, 4, 4, 0.5);
+  background: ${overlayBgColor};
   overflow: auto;
   transform: scale(0);
-  transition: transform 350ms cubic-bezier(0.4, 0, 0.2, 1),
-    opacity 350ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 350ms ${timingFunc}, opacity 350ms ${timingFunc};
   display: flex;
   align-items: center;
   justify-content: center;

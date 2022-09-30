@@ -1,6 +1,8 @@
 import { FaFacebook, FaTwitter, FaYoutube, FaLinkedinIn } from 'react-icons/fa'
+import { mainTextColor, accentColor, secondColor } from 'styles/stylesVars'
 import styled from 'styled-components'
-export default function Footer(params) {
+
+export default function Footer() {
   return (
     <FooterWrap>
       <SocialIconsList>
@@ -49,7 +51,7 @@ export default function Footer(params) {
 const FooterWrap = styled.footer`
   padding: 20px 0px;
   margin: 0 auto;
-  background: #333;
+  background: ${secondColor};
 `
 
 const SocialIconsList = styled.ul`
@@ -62,12 +64,12 @@ const SocialIconsList = styled.ul`
   }
 
   .icon {
-    fill: #ffffff;
+    fill: ${mainTextColor};
     width: 35px;
     height: 35px;
     &:hover,
     &:focus {
-      fill: #28a745;
+      fill: ${accentColor};
     }
   }
 `

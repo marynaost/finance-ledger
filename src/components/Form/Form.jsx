@@ -5,6 +5,12 @@ import { handleSubmit } from 'services/netlifyForm'
 import { Picture } from 'components/Picture/Picture'
 import Button from 'components/Button/Button'
 import Container from 'components/Container/Container'
+import {
+  secondColor,
+  formBgColor,
+  labelColor,
+  errorColor,
+} from 'styles/stylesVars'
 
 import contact from 'images/home/contact.jpg'
 import contact2 from 'images/home/contact@2x.jpg'
@@ -88,7 +94,7 @@ export default function Forma() {
 }
 
 const Section = styled.section`
-  color: #333;
+  color: ${secondColor};
   .picture {
     @media screen and (min-width: 768px) {
       width: 48%;
@@ -103,7 +109,7 @@ const Section = styled.section`
   .secondary {
     padding-top: 51px;
     padding-bottom: 25px;
-    background: #f4f4f4;
+    background: ${formBgColor};
 
     @media screen and (min-width: 768px) {
       width: 52%;
@@ -170,12 +176,12 @@ const FieldWrap = styled.div`
     border-radius: 5px;
     outline: none;
     border: 1px solid #f5f5f5;
-    color: #333;
+    color: ${secondColor};
     &:focus ~ .label,
     &:not(:placeholder-shown) ~ .label {
       top: 0;
       transform: translateY(calc(-100% - 4px));
-      color: #333;
+      color: ${secondColor};
     }
     @media screen and (min-width: 768px) {
       height: 57px;
@@ -187,7 +193,7 @@ const FieldWrap = styled.div`
     top: 50%;
     left: 8px;
     transform: translateY(-50%);
-    color: #808080;
+    color: ${labelColor};
   }
   .error {
     position: absolute;
@@ -196,7 +202,7 @@ const FieldWrap = styled.div`
     font-size: 14px;
     display: flex;
     align-items: center;
-    color: #d11212;
+    color: ${errorColor};
   }
 
   .required::before {
