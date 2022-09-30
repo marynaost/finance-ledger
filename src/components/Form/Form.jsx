@@ -43,7 +43,11 @@ export default function Forma() {
           }}
         >
           {({ errors, touched }) => (
-            <Form name="contact" method="POST" netlify>
+            <Form
+              name="contact"
+              data-netlify="true"
+              data-netlify-honeypot="bot-field"
+            >
               <FieldWrap>
                 <Field
                   name="name"
@@ -51,9 +55,8 @@ export default function Forma() {
                   placeholder=" "
                   className="field"
                   id="name"
-                  form-name="name"
                 />
-                <label for="name" className="label">
+                <label htmlFor="name" className="label">
                   Enter your name
                 </label>
                 {errors.name && touched.name ? (
@@ -67,9 +70,8 @@ export default function Forma() {
                   placeholder=" "
                   className="field"
                   id="email"
-                  form-name="email"
                 />
-                <label for="email" className="label">
+                <label htmlFor="email" className="label">
                   Enter email*
                 </label>
                 {errors.email && touched.email ? (
