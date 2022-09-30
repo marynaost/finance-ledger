@@ -5,15 +5,10 @@ import Container from 'components/Container/Container'
 import Logo from 'components/Logo/Logo'
 
 export default function Header() {
-  const [addBackground, setAddBackground] = useState(false)
+  const [position, setPosition] = useState(0)
 
   const handleScroll = () => {
-    if (window.scrollY > 70) {
-      setAddBackground(true)
-    }
-    if (window.scrollY === 0) {
-      setAddBackground(false)
-    }
+    setPosition(window.scrollY)
   }
 
   useEffect(() => {
@@ -21,14 +16,16 @@ export default function Header() {
     return () => {
       window.removeEventListener('scroll', handleScroll)
     }
-  }, [addBackground])
+  }, [position])
+
+  const initialHeaderHeight =
+    document.documentElement.clientWidth < 768 ? 120 : 70
 
   const setBackground = () => {
-    if (addBackground) {
+    if (position > initialHeaderHeight) {
       return 'rgba(0, 0, 0, 0.8)'
     }
   }
-
   const background = setBackground()
 
   return (
