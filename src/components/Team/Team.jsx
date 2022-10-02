@@ -1,15 +1,15 @@
 import styled from 'styled-components'
-import { FaFacebook, FaTwitter, FaYoutube, FaLinkedinIn } from 'react-icons/fa'
 import Container from 'components/Container/Container'
 import { Picture } from 'components/Picture/Picture'
 import {
   secondColor,
-  mainTextColor,
   duration,
   timingFunc,
   overlayBgColor,
   boxShadow,
 } from 'styles/stylesVars'
+import SubTitle from 'components/Subtitle'
+import SocialIcons from 'components/SocialIcons/SocialIcons'
 
 import person1jpg from '../../images/team/person1.jpg'
 import person1Webp from '../../images/team/person1.webp'
@@ -24,12 +24,19 @@ import person3Webp from '../../images/team/person3.webp'
 import person3jpg2x from '../../images/team/person3@2x.jpg'
 import person3Webp2x from '../../images/team/person3@2x.webp'
 
-export default function Team(params) {
+export default function Team() {
   return (
     <Section>
       <Container>
-        <SubTitle>Who we are</SubTitle>
-        <Title>Our Professional Team</Title>
+        <SubTitle
+          lineHTab="1.65"
+          sizeTab="20px"
+          lineHDesc="1.35"
+          style={{ marginBottom: '16px' }}
+        >
+          Who we are
+        </SubTitle>
+        <Title style={{}}>Our Professional Team</Title>
         <Text>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto,
           sapiente!
@@ -45,44 +52,7 @@ export default function Team(params) {
                 jpg2x={person1jpg2x}
               />
               <Overlay className="overlay">
-                <SocialIconsList>
-                  <SocialIconsItem>
-                    <a
-                      href="https://www.facebook.com/"
-                      target="blank"
-                      aria-label="facebook"
-                    >
-                      <FaFacebook className="icon" />
-                    </a>
-                  </SocialIconsItem>
-                  <SocialIconsItem>
-                    <a
-                      href="https://www.twitter.com/"
-                      target="blank"
-                      aria-label="twitter"
-                    >
-                      <FaTwitter className="icon" />
-                    </a>
-                  </SocialIconsItem>
-                  <SocialIconsItem>
-                    <a
-                      href="https://www.youtube.com/"
-                      target="blank"
-                      aria-label="youtube"
-                    >
-                      <FaYoutube className="icon" />
-                    </a>
-                  </SocialIconsItem>
-                  <SocialIconsItem>
-                    <a
-                      href="https://www.linkedin.com/"
-                      target="blank"
-                      aria-label="linkedin"
-                    >
-                      <FaLinkedinIn className="icon" />
-                    </a>
-                  </SocialIconsItem>
-                </SocialIconsList>
+                <SocialIcons opacity="0.8" />
               </Overlay>
             </TeamItemThumb>
             <div>
@@ -100,44 +70,7 @@ export default function Team(params) {
                 jpg2x={person2jpg2x}
               />
               <Overlay className="overlay">
-                <SocialIconsList>
-                  <SocialIconsItem>
-                    <a
-                      href="https://www.facebook.com/"
-                      target="blank"
-                      aria-label="facebook"
-                    >
-                      <FaFacebook className="icon" />
-                    </a>
-                  </SocialIconsItem>
-                  <SocialIconsItem>
-                    <a
-                      href="https://www.twitter.com/"
-                      target="blank"
-                      aria-label="twitter"
-                    >
-                      <FaTwitter className="icon" />
-                    </a>
-                  </SocialIconsItem>
-                  <SocialIconsItem>
-                    <a
-                      href="https://www.youtube.com/"
-                      target="blank"
-                      aria-label="youtube"
-                    >
-                      <FaYoutube className="icon" />
-                    </a>
-                  </SocialIconsItem>
-                  <SocialIconsItem>
-                    <a
-                      href="https://www.linkedin.com/"
-                      target="blank"
-                      aria-label="linkedin"
-                    >
-                      <FaLinkedinIn className="icon" />
-                    </a>
-                  </SocialIconsItem>
-                </SocialIconsList>
+                <SocialIcons opacity="0.8" />
               </Overlay>
             </TeamItemThumb>
             <div>
@@ -155,44 +88,7 @@ export default function Team(params) {
                 jpg2x={person3jpg2x}
               />
               <Overlay className="overlay">
-                <SocialIconsList>
-                  <SocialIconsItem>
-                    <a
-                      href="https://www.facebook.com/"
-                      target="blank"
-                      aria-label="facebook"
-                    >
-                      <FaFacebook className="icon" />
-                    </a>
-                  </SocialIconsItem>
-                  <SocialIconsItem>
-                    <a
-                      href="https://www.twitter.com/"
-                      target="blank"
-                      aria-label="twitter"
-                    >
-                      <FaTwitter className="icon" />
-                    </a>
-                  </SocialIconsItem>
-                  <SocialIconsItem>
-                    <a
-                      href="https://www.youtube.com/"
-                      target="blank"
-                      aria-label="youtube"
-                    >
-                      <FaYoutube className="icon" />
-                    </a>
-                  </SocialIconsItem>
-                  <SocialIconsItem>
-                    <a
-                      href="https://www.linkedin.com/"
-                      target="blank"
-                      aria-label="linkedin"
-                    >
-                      <FaLinkedinIn className="icon" />
-                    </a>
-                  </SocialIconsItem>
-                </SocialIconsList>
+                <SocialIcons opacity="0.8" />
               </Overlay>
             </TeamItemThumb>
             <div>
@@ -216,19 +112,6 @@ const Section = styled.section`
   }
   @media screen and (min-width: 1360px) {
     padding: 80px 0 88px;
-  }
-`
-
-const SubTitle = styled.h3`
-  margin-bottom: 16px;
-  font-weight: 400;
-  line-height: 1.375;
-  @media screen and (min-width: 768px) {
-    font-size: 20px;
-    line-height: 1.65;
-  }
-  @media screen and (min-width: 1360px) {
-    line-height: 1.35;
   }
 `
 
@@ -299,16 +182,6 @@ const TeamItemThumb = styled.div`
   &:hover .picture {
     transform: scale(1.05);
   }
-
-  .icon {
-    fill: ${mainTextColor};
-    width: 35px;
-    height: 35px;
-    &:hover,
-    &:focus {
-      opacity: 0.8;
-    }
-  }
 `
 
 const Overlay = styled.div`
@@ -326,16 +199,6 @@ const Overlay = styled.div`
   justify-content: center;
 `
 
-const SocialIconsList = styled.ul`
-  display: flex;
-`
-
-const SocialIconsItem = styled.li`
-  height: 35px;
-  &:not(:last-child) {
-    margin-right: 25px;
-  }
-`
 const Name = styled.p`
   font-size: 20px;
   margin-bottom: 8px;

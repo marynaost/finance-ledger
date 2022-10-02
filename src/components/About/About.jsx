@@ -2,6 +2,7 @@ import styled from 'styled-components'
 import Container from 'components/Container/Container'
 import Button from 'components/Button/Button'
 import { Picture } from 'components/Picture/Picture'
+import SubTitle from 'components/Subtitle'
 import people from 'images/home/people.jpg'
 import people2 from 'images/home/people@2x.jpg'
 import peoplewebp from 'images/home/people.webp'
@@ -18,7 +19,9 @@ export default function About(params) {
         imgStyle="img"
       />
       <Container className="secondary">
-        <SubTitle>What you are looking for</SubTitle>
+        <SubTitle style={{ marginBottom: '16px' }}>
+          What you are looking for
+        </SubTitle>
         <Title>We provide bespoke solutions</Title>
         <Text>
           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate,
@@ -67,13 +70,6 @@ const Section = styled.section`
     display: flex;
     font-size: 18px;
     line-height: 1.39;
-  }
-`
-const SubTitle = styled.h3`
-  margin-bottom: 16px;
-  font-weight: 400;
-  @media screen and (min-width: 768px) {
-    font-size: 18px;
   }
 `
 

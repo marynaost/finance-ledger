@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 import Container from 'components/Container/Container'
 import { Picture } from 'components/Picture/Picture'
+import SubTitle from 'components/Subtitle'
 import cases1jpg from 'images/cases/cases1.jpg'
 import cases1Webp from 'images/cases/cases1.webp'
 import cases1jpg2x from 'images/cases/cases1@2x.jpg'
@@ -30,7 +31,9 @@ export default function Cases(params) {
   return (
     <Section id="cases">
       <Container>
-        <SubTitle>This is what we do</SubTitle>
+        <SubTitle lineHDesc="1.83" style={{ marginBottom: '16px' }}>
+          This is what we do
+        </SubTitle>
         <Title>Business Cases</Title>
         <Text>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto,
@@ -112,16 +115,6 @@ const Section = styled.section`
   }
   @media screen and (min-width: 1360px) {
     padding: 80px 0;
-  }
-`
-const SubTitle = styled.h3`
-  margin-bottom: 16px;
-  font-weight: 400;
-  @media screen and (min-width: 768px) {
-    font-size: 18px;
-  }
-  @media screen and (min-width: 1360px) {
-    line-height: 1.83;
   }
 `
 

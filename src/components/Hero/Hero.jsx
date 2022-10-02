@@ -73,10 +73,11 @@ const Title = styled.h1`
     font-size: 55px;
   }
 `
-const SubTitle = styled.p`
+const SubTitle = styled.h3`
   font-size: 26px;
   line-height: 1.23;
   margin-bottom: 24px;
+  font-weight: 400;
   @media screen and (min-width: 768px) {
     line-height: 1.2;
   }

@@ -2,6 +2,7 @@ import styled from 'styled-components'
 import Container from 'components/Container/Container'
 import Button from 'components/Button/Button'
 import { Picture } from 'components/Picture/Picture'
+import SubTitle from 'components/Subtitle'
 import blog from 'images/home/blog.jpg'
 import blog2 from 'images/home/blog@2x.jpg'
 import blogwebp from 'images/home/blog.webp'
@@ -18,7 +19,7 @@ export default function Blog(params) {
         imgStyle="img"
       />
       <Container className="secondary">
-        <SubTitle>April 16 2020</SubTitle>
+        <SubTitle style={{ marginBottom: '16px' }}>April 16 2020</SubTitle>
         <Title>Blog Post One</Title>
         <Text>
           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate,
@@ -68,13 +69,6 @@ const Section = styled.section`
     flex-direction: row-reverse;
     font-size: 18px;
     line-height: 1.39;
-  }
-`
-const SubTitle = styled.h3`
-  margin-bottom: 16px;
-  font-weight: 400;
-  @media screen and (min-width: 768px) {
-    font-size: 18px;
   }
 `
 

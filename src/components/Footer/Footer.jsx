@@ -1,48 +1,11 @@
-import { FaFacebook, FaTwitter, FaYoutube, FaLinkedinIn } from 'react-icons/fa'
-import { mainTextColor, accentColor, secondColor } from 'styles/stylesVars'
+import { secondColor, accentColor } from 'styles/stylesVars'
 import styled from 'styled-components'
+import SocialIcons from 'components/SocialIcons/SocialIcons'
 
 export default function Footer() {
   return (
     <FooterWrap>
-      <SocialIconsList>
-        <SocialIconsItem>
-          <a
-            href="https://www.facebook.com/"
-            target="blank"
-            aria-label="facebook"
-          >
-            <FaFacebook className="icon" />
-          </a>
-        </SocialIconsItem>
-        <SocialIconsItem>
-          <a
-            href="https://www.twitter.com/"
-            target="blank"
-            aria-label="twitter"
-          >
-            <FaTwitter className="icon" />
-          </a>
-        </SocialIconsItem>
-        <SocialIconsItem>
-          <a
-            href="https://www.youtube.com/"
-            target="blank"
-            aria-label="youtube"
-          >
-            <FaYoutube className="icon" />
-          </a>
-        </SocialIconsItem>
-        <SocialIconsItem>
-          <a
-            href="https://www.linkedin.com/"
-            target="blank"
-            aria-label="linkedin"
-          >
-            <FaLinkedinIn className="icon" />
-          </a>
-        </SocialIconsItem>
-      </SocialIconsList>
+      <SocialIcons fill={accentColor} />
       <FooterText>Copyright &#169; 2021 - FinanceLedger</FooterText>
     </FooterWrap>
   )
@@ -54,37 +17,13 @@ const FooterWrap = styled.footer`
   background: ${secondColor};
 `
 
-const SocialIconsList = styled.ul`
-  display: flex;
-  justify-content: center;
-  margin-bottom: 12px;
-
-  @media screen and (min-width: 768px) {
-    margin-bottom: 10px;
-  }
-
-  .icon {
-    fill: ${mainTextColor};
-    width: 35px;
-    height: 35px;
-    &:hover,
-    &:focus {
-      fill: ${accentColor};
-    }
-  }
-`
-
-const SocialIconsItem = styled.li`
-  height: 35px;
-  &:not(:last-child) {
-    margin-right: 25px;
-  }
-`
 const FooterText = styled.p`
   line-height: 1.375;
   text-align: center;
+  margin-top: 12px;
   @media screen and (min-width: 768px) {
     font-size: 18px;
     line-height: 1.39;
+    margin-top: 10px;
   }
 `
