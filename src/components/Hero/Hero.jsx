@@ -80,9 +80,12 @@ const SubTitle = styled.h3`
   font-weight: 400;
   @media screen and (min-width: 768px) {
     line-height: 1.2;
+    font-size: 40px;
+    padding: 0 60px;
   }
 
   @media screen and (min-width: 1360px) {
     line-height: 1.35;
+    padding: 0;
   }
 `
