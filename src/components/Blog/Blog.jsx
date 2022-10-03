@@ -2,12 +2,15 @@ import styled from 'styled-components'
 import Container from 'components/Container/Container'
 import Button from 'components/Button/Button'
 import { Picture } from 'components/Picture/Picture'
-import SubTitle from 'components/Subtitle'
+import SubTitle from 'components/Subtitle/Subtitle'
+import Text from 'components/Text/Text'
+import Title from 'components/Title/Title'
 import blog from 'images/home/blog.jpg'
 import blog2 from 'images/home/blog@2x.jpg'
 import blogwebp from 'images/home/blog.webp'
 import blogwebp2 from 'images/home/blog@2x.webp'
-export default function Blog(params) {
+
+export default function Blog() {
   return (
     <Section id="blog">
       <Picture
@@ -20,8 +23,8 @@ export default function Blog(params) {
       />
       <Container className="secondary">
         <SubTitle style={{ marginBottom: '16px' }}>April 16 2020</SubTitle>
-        <Title>Blog Post One</Title>
-        <Text>
+        <Title style={{ marginBottom: '24px' }}>Blog Post One</Title>
+        <Text style={{ marginBottom: '24px' }}>
           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate,
           ipsum dignissimos quae laudantium asperiores nam aliquid impedit harum
           illum dolore explicabo ab dolores itaque rerum temporibus doloribus
@@ -36,7 +39,6 @@ export default function Blog(params) {
 }
 
 const Section = styled.section`
-  line-height: 1.375;
   background: #0284d0;
   .picture {
     @media screen and (min-width: 768px) {
@@ -67,23 +69,5 @@ const Section = styled.section`
   @media screen and (min-width: 768px) {
     display: flex;
     flex-direction: row-reverse;
-    font-size: 18px;
-    line-height: 1.39;
-  }
-`
-
-const Title = styled.h2`
-  margin-bottom: 24px;
-  font-size: 32px;
-  font-weight: 400;
-  @media screen and (min-width: 768px) {
-    font-size: 40px;
-    line-height: 1.35;
-  }
-`
-
-const Text = styled.p`
-  margin-bottom: 24px;
-  @media screen and (min-width: 768px) {
   }
 `

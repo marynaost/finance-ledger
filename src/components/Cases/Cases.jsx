@@ -1,7 +1,9 @@
 import styled from 'styled-components'
 import Container from 'components/Container/Container'
 import { Picture } from 'components/Picture/Picture'
-import SubTitle from 'components/Subtitle'
+import SubTitle from 'components/Subtitle/Subtitle'
+import Title from 'components/Title/Title'
+
 import cases1jpg from 'images/cases/cases1.jpg'
 import cases1Webp from 'images/cases/cases1.webp'
 import cases1jpg2x from 'images/cases/cases1@2x.jpg'
@@ -27,14 +29,16 @@ import cases4Webp from 'images/cases/cases4.webp'
 import cases4jpg2x from 'images/cases/cases4@2x.jpg'
 import cases4Webp2x from 'images/cases/cases4@2x.webp'
 
-export default function Cases(params) {
+export default function Cases() {
   return (
     <Section id="cases">
       <Container>
         <SubTitle lineHDesc="1.83" style={{ marginBottom: '16px' }}>
           This is what we do
         </SubTitle>
-        <Title>Business Cases</Title>
+        <Title lineHDesc="1.2" style={{ marginBottom: '24px' }}>
+          Business Cases
+        </Title>
         <Text>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto,
           sapiente!
@@ -115,21 +119,6 @@ const Section = styled.section`
   }
   @media screen and (min-width: 1360px) {
     padding: 80px 0;
-  }
-`
-
-const Title = styled.h2`
-  margin-bottom: 24px;
-  font-size: 32px;
-  font-weight: 400;
-  line-height: 1.375;
-  @media screen and (min-width: 768px) {
-    font-size: 40px;
-    line-height: 1.35;
-  }
-  @media screen and (min-width: 1360px) {
-    font-size: 40px;
-    line-height: 1.2;
   }
 `
 

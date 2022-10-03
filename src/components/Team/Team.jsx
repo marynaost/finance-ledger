@@ -8,7 +8,8 @@ import {
   overlayBgColor,
   boxShadow,
 } from 'styles/stylesVars'
-import SubTitle from 'components/Subtitle'
+import SubTitle from 'components/Subtitle/Subtitle'
+import Title from 'components/Title/Title'
 import SocialIcons from 'components/SocialIcons/SocialIcons'
 
 import person1jpg from '../../images/team/person1.jpg'
@@ -36,7 +37,7 @@ export default function Team() {
         >
           Who we are
         </SubTitle>
-        <Title style={{}}>Our Professional Team</Title>
+        <Title style={{ marginBottom: '24px' }}>Our Professional Team</Title>
         <Text>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto,
           sapiente!
@@ -112,17 +113,6 @@ const Section = styled.section`
   }
   @media screen and (min-width: 1360px) {
     padding: 80px 0 88px;
-  }
-`
-
-const Title = styled.h2`
-  margin-bottom: 24px;
-  font-size: 32px;
-  font-weight: 400;
-  line-height: 1.375;
-  @media screen and (min-width: 768px) {
-    font-size: 40px;
-    line-height: 1.35;
   }
 `
 

@@ -25,7 +25,7 @@ const SubTitleWrap = styled.h3`
   font-size: 16px;
   @media screen and (min-width: 768px) {
     font-size: ${props => props.sizeTab || '18px'};
-    line-height: ${props => props.lineHTab};
+    line-height: ${props => props.lineHTab || '1.39'};
   }
   @media screen and (min-width: 1360px) {
     line-height: ${props => props.lineHDesc};

@@ -2,12 +2,15 @@ import styled from 'styled-components'
 import Container from 'components/Container/Container'
 import Button from 'components/Button/Button'
 import { Picture } from 'components/Picture/Picture'
-import SubTitle from 'components/Subtitle'
+import SubTitle from 'components/Subtitle/Subtitle'
+import Text from 'components/Text/Text'
+import Title from 'components/Title/Title'
 import people from 'images/home/people.jpg'
 import people2 from 'images/home/people@2x.jpg'
 import peoplewebp from 'images/home/people.webp'
 import peoplewebp2 from 'images/home/people@2x.webp'
-export default function About(params) {
+
+export default function About() {
   return (
     <Section id="about">
       <Picture
@@ -22,8 +25,10 @@ export default function About(params) {
         <SubTitle style={{ marginBottom: '16px' }}>
           What you are looking for
         </SubTitle>
-        <Title>We provide bespoke solutions</Title>
-        <Text>
+        <Title lineHTab="1.2" style={{ marginBottom: '24px' }}>
+          We provide bespoke solutions
+        </Title>
+        <Text style={{ marginBottom: '24px' }}>
           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate,
           ipsum dignissimos quae laudantium asperiores nam aliquid impedit harum
           illum dolore explicabo ab dolores itaque rerum temporibus doloribus
@@ -38,7 +43,6 @@ export default function About(params) {
 }
 
 const Section = styled.section`
-  line-height: 1.375;
   background: #28a745;
   .picture {
     @media screen and (min-width: 768px) {
@@ -68,23 +72,5 @@ const Section = styled.section`
 
   @media screen and (min-width: 768px) {
     display: flex;
-    font-size: 18px;
-    line-height: 1.39;
-  }
-`
-
-const Title = styled.h2`
-  margin-bottom: 24px;
-  font-size: 32px;
-  font-weight: 400;
-  @media screen and (min-width: 768px) {
-    font-size: 40px;
-    line-height: 1.2;
-  }
-`
-
-const Text = styled.p`
-  margin-bottom: 24px;
-  @media screen and (min-width: 768px) {
   }
 `

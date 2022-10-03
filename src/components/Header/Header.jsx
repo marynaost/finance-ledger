@@ -157,6 +157,7 @@ const NavItem = styled.li`
 
   .link {
     position: relative;
+    cursor: pointer;
     &:hover::after,
     &:focus::after {
       opacity: 1;
